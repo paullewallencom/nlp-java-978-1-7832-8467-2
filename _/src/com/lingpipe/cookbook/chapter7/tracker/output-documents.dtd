@@ -1,0 +1,19 @@
+<!ELEMENT docs (doc*)>
+
+<!ELEMENT doc (title?,content?)>
+<!ATTLIST doc
+          id CDATA #REQUIRED>
+
+<!ELEMENT title (#PCDATA|s)*>
+
+<!ELEMENT content (#PCDATA|s)*>
+
+<!ELEMENT s (#PCDATA|entity)*>
+<!ATTLIST s 
+          index #REQUIRED>
+
+<!ELEMENT entity (#PCDATA)>
+<!ATTLIST entity
+          index CDATA #REQUIRED
+          id CDATA #REQUIRED
+          type CDATA #REQUIRED>

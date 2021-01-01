@@ -1,0 +1,19 @@
+<!ELEMENT dictionary (entity*,stoplist?)>
+<!ATTLIST dictionary>
+  
+<!ELEMENT entity (alias+,non-alias*)>
+<!ATTLIST entity
+          id ID #REQUIRED
+          type CDATA #REQUIRED   
+          canonical CDATA #REQUIRED
+          speculativeAliases CDATA "1">
+  
+<!ELEMENT alias (#PCDATA)>
+<!ATTLIST alias
+          xdc CDATA "1">
+
+<!ELEMENT non-alias (#PCDATA)>
+
+<!ELEMENT stoplist (phrase*)>
+
+<!ELEMENT phrase (#PCDATA)>

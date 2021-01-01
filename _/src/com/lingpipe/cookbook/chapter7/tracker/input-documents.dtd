@@ -1,0 +1,9 @@
+<!ELEMENT docs (doc*)>
+
+<!ELEMENT doc (title?,content?)>
+<!ATTLIST doc
+          id CDATA #REQUIRED>
+
+<!ELEMENT title (#PCDATA)>
+
+<!ELEMENT content (#PCDATA)>
